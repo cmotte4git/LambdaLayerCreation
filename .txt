@@ -1,0 +1,3 @@
+pip download --only-binary :all: --dest . --no-cache --platform manylinux_2_24_aarch64 duckdb
+
+https://files.pythonhosted.org/packages/c4/5e/ecc02ae6a8e9b6d9007060843af9a78be316a4011ef0142dead5f17280df/duckdb-0.10.3-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl
