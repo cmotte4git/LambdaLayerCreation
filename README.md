@@ -1,4 +1,4 @@
-You give three parameters: package_name, platform (linux, windows, ARM, X86-64), layer_name  and S3 bucket
+You give four parameters: package_name, platform (linux, windows, ARM, X86-64), layer_name  and S3 bucket
 Script will perform the following operations:
 1. PIP download
 2. Extract wheel file
