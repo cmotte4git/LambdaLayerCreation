@@ -80,18 +80,19 @@ if __name__ == "__main__":
     region = os.getenv('AWS_REGION')
 
    # Create the lambda_layer/python directory if it doesn't exist
-   os.makedirs(source_dir, exist_ok=True)
+    os.makedirs(source_dir, exist_ok=True)
 
    # Download the .whl file
-   download_wheel(package_name, platform, source_dir)
+    download_wheel(package_name, platform, source_dir)
 
    # Extract the .whl file into the python directory
-   whl_files = [f for f in os.listdir(source_dir) if f.endswith(".whl")]
-   if not whl_files:
+    whl_files = [f for f in os.listdir(source_dir) if f.endswith(".whl")]
+
+    if not whl_files:
        print("No wheel files found.")
        sys.exit(1)
 
-   for whl_file in whl_files:
+    for whl_file in whl_files:
        whl_path = os.path.join(source_dir, whl_file)
        extract_whl(whl_path, source_dir)
        os.remove(whl_path)  # Remove the .whl file
